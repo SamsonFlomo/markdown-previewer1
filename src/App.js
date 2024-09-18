@@ -56,24 +56,22 @@ And here. | Okay. | I think we get it.
 function App() {
 
   const [markdownText, setMarkdownText] = useState(defaultMarkdown);
-  
+
   return (
     <div className="App">
       <h1 id="title">Markdown Previewer App</h1>
-      <p>Angry!</p>
-      
-      
+
       <div class="boxes-container display">
-      	   <textarea name="editor" id="editor" class="view" value={markdownText} onChange={(e) => setMarkdownText(e.target.value)}>
+      	   <textarea name="editor" title="Editor" id="editor" class="view" value={markdownText} onChange={(e) => setMarkdownText(e.target.value)}>
       	   </textarea>
-      	
-      	<div id="preview" class="view">
+
+      	<div title="Previewer" id="preview" class="view">
       		  <ReactMarkdown>{markdownText}</ReactMarkdown>
       	</div>
       </div>
-      
-      
+
     </div>
+
   );
 }
 
